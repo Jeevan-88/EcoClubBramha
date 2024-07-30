@@ -1,0 +1,300 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0f1d4; 
+    margin: 0;
+}
+
+.header {
+    background-color: #fff;
+    padding: 0px 15px 0px 0px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7bc646;
+    /* background-image: url("/1. Home/images/header.jpg"); */
+}
+
+.logo {
+    flex: 0 0 auto;
+}
+
+.logo img {
+    width: 200px; 
+    height: auto;
+}
+
+.nav-links {
+    flex: 1 1 auto;
+    text-align: right;
+    margin: 0 52px;
+}
+
+.nav-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #5D9D22; /* Hover color */
+}
+
+/* Base Styling */
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    
+}
+
+.about-section {
+    display: flex;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.content-div{
+    display: flex;
+    /* gap: 300px; */
+
+}
+
+.side-bar {
+    width: 250px; /* Adjust width as needed */
+    background-color: #7bc646;
+    /* background-color:white; */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px; /* Adjust if you want the sidebar to stick after scrolling */
+    /* height: calc(100vh - 40px);  */
+    height: 83vh;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    position: relative;
+    /* position: fixed; */
+}
+
+/* .bg-tree{
+    background-image: url("/2. About Us/images/bg-tree.png");
+    opacity: 1;
+
+} */
+
+.sidebar-info{
+    margin: 43px 0;
+    text-align: center;
+}
+
+.sidebar-info>img{
+    width: 100%;
+}
+
+.sidebar-info>p{
+    font-size: 15px;
+}
+
+.follow-info{
+    margin-top: 112px;
+    position: absolute;
+    bottom: 13px;
+    right: 53px;
+    text-align: center;
+}
+
+.follow-links{
+    display: flex;
+    gap: 23px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.follow-img{
+    width: 33px;
+}
+
+.tab {
+    background-color: #0ea144;
+    color: white;
+    cursor: pointer;
+    padding: 9px 11px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #5D9D22;
+}
+
+.tab.active {
+    background-color: #077937; /* Darker shade for the active tab */
+}
+
+/* Content Area Styling */
+.content-area {
+    flex: 1;
+    padding: 15px;
+    /* max-height: 100%; */
+    /* height: 97vh; */
+    margin-left: 20px; /* Space between sidebar and content */
+}
+
+/* Tab Content Styling */
+.tab-content {
+    display: none;
+    opacity: 0;
+    height: 83vh;
+    max-height: 0;
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    padding: 10px;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    max-height: 1000px; /* Adjust this value based on your content */
+}
+
+/* Optional: Style for the scrollbar for Webkit browsers */
+.tab-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.tab-content::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+.content-section{
+    margin: 15px;
+}
+/* Content Styling */
+.heading1 {
+    color: #4a4130;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.heading2 {
+    color: #4a4130;
+    font-size: 15px;
+}
+
+.heading3 {
+    color: #4a4130;
+    font-size: 18px;
+}
+
+.content1 {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.strategy-list,
+.aims-objectives-list,
+.methodology-list,
+.strengths-list,
+.achievement-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.strategy-list li,
+.aims-objectives-list li,
+.methodology-list li,
+.strengths-list li,
+.achievement-list li {
+    margin-bottom: 10px;
+}
+
+/* Achievements section styling */
+.acheive-sec {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.left-sec {
+    flex: 2;
+}
+
+.right-sec {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+    align-items: center;
+}
+
+.acheive-img {
+    width: 100%;
+    max-width: 200px; /* Adjust based on needs */
+    border-radius: 7px;
+}
+
+
+
+/* Footer styles */
+.footer {
+    background-color: #2a2521;
+    color: #a0a0a0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    color: #a0a0a0;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #5D9D22; /* Hover color */
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+/* Additional styles */
+.link3 {
+    border-bottom: 1px dotted #514740;
+    padding-bottom: 5px;
+}
+
